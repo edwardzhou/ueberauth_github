@@ -1,7 +1,7 @@
 defmodule Ueberauth.Github.Mixfile do
   use Mix.Project
 
-  @version "0.7.0"
+  @version "0.7.1"
 
   def project do
     [app: :ueberauth_github,
@@ -11,8 +11,8 @@ defmodule Ueberauth.Github.Mixfile do
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     source_url: "https://github.com/ueberauth/ueberauth_github",
-     homepage_url: "https://github.com/ueberauth/ueberauth_github",
+     source_url: "https://github.com/edwardzhou/ueberauth_github",
+     homepage_url: "https://github.com/edwardzhou/ueberauth_github",
      description: description(),
      deps: deps(),
      docs: docs()]
@@ -45,9 +45,11 @@ defmodule Ueberauth.Github.Mixfile do
   end
 
   defp package do
-    [files: ["lib", "mix.exs", "README.md", "LICENSE"],
-     maintainers: ["Daniel Neighman", "Sean Callan"],
+    [
+      name: "ueberauth_github_ez",
+      files: ["lib", "mix.exs", "README.md", "LICENSE"],
+      maintainers: ["Edward Zhou", "Daniel Neighman", "Sean Callan"],
       licenses: ["MIT"],
-      links: %{"GitHub": "https://github.com/ueberauth/ueberauth_github"}]
+      links: %{"GitHub": "https://github.com/edwardzhou/ueberauth_github"}]
   end
 end
